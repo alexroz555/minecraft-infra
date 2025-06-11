@@ -15,7 +15,6 @@ The result is an automated server that can be accessed from anywhere using the p
 - Terraform
 - Ansible
 - AWS CLI configured (`aws configure`)
-- SSH access to the EC2 instance
 
 ### Credentials
 

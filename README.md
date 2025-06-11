@@ -50,10 +50,10 @@ graph TD;
 
 ## Commands
 ### Provisioning Terraform
-terraform init
-terraform apply
+`terraform init`
+`terraform apply`
 ### Running the Ansible script
-./run-script.sh
+`./run-script.sh`
 ## Connecting to the Server
 Join the server by starting up Minecraft, going to Multiplayer, and joining a server by typing in the provided public IP in this format: <public_ip>:25565
 

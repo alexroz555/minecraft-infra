@@ -21,7 +21,7 @@ The result is an automated server that can be accessed from anywhere using the p
 You must have:
 
 - An AWS account
-- A valid AWS key pair for SSH access
+- A valid AWS key pair for automated SSH access
 
 ### Environment Setup
 
@@ -48,10 +48,15 @@ graph TD;
 ```
 
 ## Commands
+###Clone the Repository
+`git clone https://github.com/alexroz555/minecraft-infra.git`
+`cd minecraft-infra`
 ### Provisioning Terraform
+Go to the Terraform directory using `cd Terraform` and run these commands:
 `terraform init`
 `terraform apply`
 ### Running the Ansible script
+Go to the Ansible directory using `cd Ansible` and run the script using this command:
 `./run-script.sh`
 ## Connecting to the Server
 Join the server by starting up Minecraft, going to Multiplayer, and joining a server by typing in the provided public IP in this format: <public_ip>:25565

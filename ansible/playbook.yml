@@ -5,7 +5,7 @@
   tasks:
     - name: install java
       yum:
-        name: java-1.8.0-openjdk
+        name: java-21-amazon-corretto
         state: present
 
     - name: download minecraft server jar
@@ -31,12 +31,13 @@
           User=ec2-user
           WorkingDirectory=/home/ec2-user
           ExecStart=/usr/bin/java -Xmx1024M -Xms1024M -jar server.jar nogui
+          ExecStop=/bin/kill -s SIGINT $MAINPID
           Restart=always
 
           [Install]
           WantedBy=multi-user.target
 
-    - name: Enable and start the Minecraft server
+    - name: start the Minecraft server
       systemd:
         name: minecraft
         enabled: yes

@@ -12,8 +12,8 @@ The result is an automated server that can be accessed from anywhere using the p
 
 ### Required Tools
 
-- [Terraform]
-- [Ansible]
+- Terraform
+- Ansible
 - AWS CLI configured (`aws configure`)
 - SSH access to the EC2 instance
 

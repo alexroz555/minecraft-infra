@@ -52,11 +52,11 @@ graph TD;
 `git clone https://github.com/alexroz555/minecraft-infra.git`
 `cd minecraft-infra`
 ### Provisioning Terraform
-Go to the Terraform directory using `cd Terraform` and run these commands:
+Go to the Terraform directory using `cd terraform` and run these commands:
 `terraform init`
 `terraform apply`
 ### Running the Ansible script
-Go to the Ansible directory using `cd Ansible` and run the script using this command:
+Go to the Ansible directory using `cd ansible` and run the script using this command:
 `./run-script.sh`
 ## Connecting to the Server
 Join the server by starting up Minecraft, going to Multiplayer, and joining a server by typing in the provided public IP in this format: <public_ip>:25565

@@ -48,7 +48,7 @@ graph TD;
 ```
 
 ## Commands
-###Clone the Repository
+### Clone the Repository
 `git clone https://github.com/alexroz555/minecraft-infra.git`
 `cd minecraft-infra`
 ### Provisioning Terraform

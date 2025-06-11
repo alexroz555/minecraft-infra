@@ -1,1 +1,58 @@
-# Minecraft infra
+# Minecraft Server Deployment on AWS (Terraform + Ansible)
+
+## Background
+
+This project configures a Minecraft server on AWS using **Terraform** and **Ansible**. We use **Terraform** to create the infrastructure and **Ansible** to configure the instance and deploy the server.
+
+The result is an automated server that can be accessed from anywhere using the public IP address.
+
+---
+
+## Requirements
+
+### Required Tools
+
+- [Terraform]
+- [Ansible]
+- AWS CLI configured (`aws configure`)
+- SSH access to the EC2 instance
+
+### Credentials
+
+You must have:
+
+- An AWS account
+- A valid AWS key pair for SSH access
+
+### Environment Setup
+
+Set the following environment variables:
+
+```bash
+export AWS_ACCESS_KEY_ID=your_access_key
+export AWS_SECRET_ACCESS_KEY=your_secret_key
+export AWS_DEFAULT_REGION=us-east-1
+```
+## Major Steps Diagram
+```mermaid
+graph TD;
+    A[Start: Terraform] --> B[Provision AWS Infrastructure]
+    B --> C[Create EC2 Instance]
+    C --> D[Configure Security Group<br>with Port 25565 Open]
+    D --> E[Run Ansible Playbook]
+    E --> F[Install Java and Download Minecraft]
+    F --> G[Accept EULA]
+    G --> H[Create systemd Service]
+    H --> I[Minecraft Server Running]
+    I --> J[Accessible via Public IP]
+```
+
+## Commands
+### Provisioning Terraform
+terraform init
+terraform apply
+### Running the Ansible script
+./run-script.sh
+## Connecting to the Server
+Join the server by starting up Minecraft, going to Multiplayer, and joining a server by typing in the provided public IP in this format: <public_ip>:25565
+

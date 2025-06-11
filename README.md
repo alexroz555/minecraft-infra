@@ -29,8 +29,9 @@ You must have:
 Set the following environment variables:
 
 ```bash
-export AWS_ACCESS_KEY_ID=your_access_key
-export AWS_SECRET_ACCESS_KEY=your_secret_key
+export AWS_ACCESS_KEY_ID=access_key
+export AWS_SECRET_ACCESS_KEY=secret_key
+export AWS_SESSION_TOKEN=session_token
 export AWS_DEFAULT_REGION=us-east-1
 ```
 ## Major Steps Diagram
